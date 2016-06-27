@@ -25,7 +25,7 @@
             noteExists = "";
           }
           $("#loading2").hide();
-          $('#articles2').append('<div class="card blue-grey lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"></div></div></div></div>');
+          $('#articles2').append('<div class="card blue-grey lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"><form class="in-form"><input id="titleinput" name="title"><textarea id="bodyinput" name="body"></textarea></form></div></div></div></div>');
         }
         if(data[i].src == 3){
           if(data[i].note){
@@ -34,7 +34,7 @@
             noteExists = "";
           }
           $("#loading3").hide();
-          $('#articles3').append('<div class="card light-blue lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"></div></div></div></div>');
+          $('#articles3').append('<div class="card light-blue lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"><form class="in-form"><input id="titleinput" name="title"><textarea id="bodyinput" name="body"></textarea></form></div></div></div></div>');
         }
       }
       
