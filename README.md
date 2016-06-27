@@ -19,4 +19,4 @@ Materializecss, HTML5, jQuery, Javascript, NodeJS, Express, MongoDB, Cheerio
 3. To remove the note, select the 'Edit Note' button and then select 'Delete'
 4. To read a full story, click on the headline
 
-1[example](public/combinr.gif)
+1[example](public/images/combinr.gif)
