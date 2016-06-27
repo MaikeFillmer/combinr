@@ -71,7 +71,7 @@ $(document).on('click', '.btn', function(){
         $('#'+thisId+'a').append('<button data-id="' + data._id + '" id="savenote" class="waves-effect waves-light btn">Save Note</button>');
         
       }
-      $('form').hide();
+      
     });
 });
 
@@ -89,7 +89,7 @@ $(document).on('click', '#savenote', function(){
     }
   })
     .done(function( data ) {
-      $('.in-form').hide();
+      $('form').hide();
     });
 
     location.reload();
@@ -107,7 +107,7 @@ $(document).on('click', '#deletenote', function(){
   })
     .done(function( data ) {
       
-      $('.in-form').hide();
+      $('form').hide();
     });
 
   location.reload();
