@@ -15,8 +15,8 @@
             noteExists = "";
           }
           $("#loading1").hide();
-          $('#articles1').append('<div class="card teal lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"><form class="in-form"><input id="titleinput" name="title"><textarea id="bodyinput" name="body"></textarea></form></div></div></div></div>');
-          $('.in-form').hide();
+          $('#articles1').append('<div class="card teal lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"><form class="in-form'+ data[i]._id +'"><input id="titleinput" name="title"><textarea id="bodyinput" name="body"></textarea></form></div></div></div></div>');
+          $('form').hide();
         }
         if(data[i].src == 2){
           if(data[i].note){
@@ -25,7 +25,8 @@
             noteExists = "";
           }
           $("#loading2").hide();
-          $('#articles2').append('<div class="card blue-grey lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"><form class="in-form"><input id="titleinput" name="title"><textarea id="bodyinput" name="body"></textarea></form></div></div></div></div>');
+          $('#articles2').append('<div class="card blue-grey lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"><form class="in-form'+ data[i]._id +'"><input id="titleinput" name="title"><textarea id="bodyinput" name="body"></textarea></form></div></div></div></div>');
+          $('form').hide();
         }
         if(data[i].src == 3){
           if(data[i].note){
@@ -34,7 +35,8 @@
             noteExists = "";
           }
           $("#loading3").hide();
-          $('#articles3').append('<div class="card light-blue lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"><form class="in-form"><input id="titleinput" name="title"><textarea id="bodyinput" name="body"></textarea></form></div></div></div></div>');
+          $('#articles3').append('<div class="card light-blue lighten-5 hoverable" data-id="' + data[i]._id +'"><div class="card-content black-text"><span class="card-title"><a href="'+data[i].link+'">' + data[i].title + noteExists+'</a></span>'+'<div class="card-action"><a class="waves-effect waves-light btn" data-id="' + data[i]._id +'">Edit Note</a><div id="'+data[i]._id+'a" class="note"><form class="in-form'+ data[i]._id +'"><input id="titleinput" name="title"><textarea id="bodyinput" name="body"></textarea></form></div></div></div></div>');
+          $('form').hide();
         }
       }
       
@@ -45,7 +47,7 @@
 $(document).on('click', '.btn', function(){
   var thisId = $(this).attr('data-id');
   console.log(thisId);
-  $(".in-form").show();
+  $(".in-form" + thisId).show();
 
   $.ajax({
     method: "GET",
@@ -69,6 +71,7 @@ $(document).on('click', '.btn', function(){
         $('#'+thisId+'a').append('<button data-id="' + data._id + '" id="savenote" class="waves-effect waves-light btn">Save Note</button>');
         
       }
+      $('form').hide();
     });
 });
 
