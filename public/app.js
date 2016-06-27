@@ -2,6 +2,7 @@
   $("#loading1").show();
   $("#loading2").show();
   $("#loading3").show();
+
   $.getJSON('/scrape1', function(data, status) {
 
     
@@ -63,15 +64,15 @@ $(document).on('click', '.btn', function(){
 
       if(data.note){
         console.log('in');
-        $('#titleinput').val(data.note.title);
-        $('#bodyinput').val(data.note.body);
+        $('.in-form' + thisId).find('#titleinput').val(data.note.title);
+        $('.in-form' + thisId).find('#bodyinput').val(data.note.body);
         $('#'+thisId+'a').append('<button data-id="' + data._id + '" id="deletenote" class="waves-effect waves-light btn">Delete Note</button>');
         
       }else{
         $('#'+thisId+'a').append('<button data-id="' + data._id + '" id="savenote" class="waves-effect waves-light btn">Save Note</button>');
         
       }
-      
+
     });
 });
 
@@ -84,8 +85,8 @@ $(document).on('click', '#savenote', function(){
     method: "POST",
     url: "/savenote/" + thisId,
     data: {
-      title: $('#titleinput').val(),
-      body: $('#bodyinput').val()
+      title: $('.in-form' + thisId).find('#titleinput').val(),
+      body: $('.in-form' + thisId).find('#bodyinput').val()
     }
   })
     .done(function( data ) {
@@ -93,8 +94,8 @@ $(document).on('click', '#savenote', function(){
     });
 
     location.reload();
-  $('#titleinput').val("");
-  $('#bodyinput').val("");
+  $('.in-form' + thisId).find('#titleinput').val('');
+  $('.in-form' + thisId).find('#bodyinput').val('');
   
 });
 //This deletes the note
@@ -111,8 +112,8 @@ $(document).on('click', '#deletenote', function(){
     });
 
   location.reload();
-  $('#titleinput').val("");
-  $('#bodyinput').val("");
+  $('.in-form' + thisId).find('#titleinput').val('');
+  $('.in-form' + thisId).find('#bodyinput').val('');
   
 });
 
