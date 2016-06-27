@@ -97,7 +97,7 @@ app.get('/scrape1', function(req, res){
 					var result3 = {};
 
 					result3.title = $(this).children('.assetHed').text();
-					result3.link = "www.cnet.com" + $(this).children('.assetHed').attr('href');
+					result3.link = "http://www.cnet.com" + $(this).children('.assetHed').attr('href');
 					result3.src = 3;
 					var entry = new Article (result3);
 					entry.save(function(err, doc) {

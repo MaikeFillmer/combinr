@@ -91,11 +91,12 @@ $(document).on('click', '#savenote', function(){
   })
     .done(function( data ) {
       $('form').hide();
+      location.reload();
+      $('.in-form' + thisId).find('#titleinput').val('');
+      $('.in-form' + thisId).find('#bodyinput').val('');
     });
 
-    location.reload();
-  $('.in-form' + thisId).find('#titleinput').val('');
-  $('.in-form' + thisId).find('#bodyinput').val('');
+    
   
 });
 //This deletes the note
