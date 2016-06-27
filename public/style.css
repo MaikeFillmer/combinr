@@ -10,15 +10,7 @@
       background-size: cover;
     }
     
-    #articles{
-      width:60%;
-      height:700px;
-      display:inline-block;
-      overflow: auto;
-    }
-    #notes{
-      width:30%;
-      float:right;
+    oat:right;
     }
     textarea, input{
       display:block;
