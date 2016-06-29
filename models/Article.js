@@ -25,6 +25,7 @@ var ArticleSchema = new Schema({
     type:String,
     required:true
   },
+  createdAt: {type: Date, expires: '1m', default: Date.now},
   // img: {
   //   type:String,
   //   required:true,

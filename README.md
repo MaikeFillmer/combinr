@@ -6,7 +6,7 @@ Get you tech news in one place and add notes to relevant stories! This app pulls
 
 ## Technologies Used
 
-Materializecss, HTML5, jQuery, Javascript, NodeJS, Express, MongoDB, Cheerio
+MaterializeCSS, HTML5, jQuery, Javascript, NodeJS, Express, MongoDB, Cheerio
 
 ## Link
 
