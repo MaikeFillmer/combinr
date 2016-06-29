@@ -50,13 +50,13 @@ $(document).on('click', '.btn', function(){
     /* your code goes here */
     console.log('hidden');
     var thisId = $(this).attr('data-id');
-  console.log(thisId);
-  $(".in-form" + thisId).show();
+    console.log(thisId);
+    $(".in-form" + thisId).show();
 
-  $.ajax({
-    method: "GET",
-    url: "/articles/" + thisId,
-  })
+   $.ajax({
+     method: "GET",
+     url: "/articles/" + thisId,
+   })
     .done(function( data ) {
      // $('#'+thisId+'a').append('<input id="titleinput" name="title">');
       
