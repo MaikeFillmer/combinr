@@ -46,7 +46,7 @@
  
 //When the Add a Note button is clicked, the note input (or display) box is displayed
 $(document).on('click', '.btn', function(){
-  if( $('form').css('display') == 'none' ){
+  if( $('.buttonCtr' ).find('button').length==0){
     /* your code goes here */
     console.log('hidden');
     var thisId = $(this).attr('data-id');
@@ -79,6 +79,7 @@ $(document).on('click', '.btn', function(){
     });
 } else {
   console.log('displayed');
+    Materialize.toast('Please finish editing your note', 4000)
     /* alternate logic   */
 }
   
