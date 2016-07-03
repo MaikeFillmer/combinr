@@ -19,7 +19,7 @@ app.use(express.static('public'));
 var database = {
 	
 	local : '',
-	remote : 'mongodb://mfillmer:combinr@ds023644.mlab.com:23644/combinr'
+	remote : process.env.MONGODB
 }
 
 //select the DB connection
